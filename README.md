@@ -1,11 +1,8 @@
 # 🌟 Spring Boot ile Modern Java Uygulamaları Öğrenme Projesi
 
-Bu proje, Spring Boot ve Spring ekosistemini adım adım öğrenmek isteyenler için hazırlanmıştır. 
-Projeyi takip ederek; REST API geliştirme, Spring Data JPA ile CRUD işlemleri, validation, entity ilişkileri, hata yönetimi, test yazımı ve güvenli servis geliştirme konularında pratik yapabilirsiniz.
+Projenin içeriği; REST API geliştirme, Spring Data JPA ile CRUD işlemleri, validation, entity ilişkileri, hata yönetimi, test yazımı ve güvenli servis geliştirme konularını barındırır
 
 ---
-
-## 📚 İçerik Başlıkları
 
 ### 🚀 Spring Neden Kullanılır?
 - Spring Framework'ün sağladığı avantajlar
