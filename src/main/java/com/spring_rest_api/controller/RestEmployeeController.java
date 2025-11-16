@@ -18,7 +18,7 @@ public class RestEmployeeController {
         return employeeService.getAllEmployees();
     }
 
-    @GetMapping(path = "/list/{id}")
+    @GetMapping("/list/{id}")
     public Employee getEmployeeById(@PathVariable(name = "id",required = true)String id) {
         return employeeService.getEmployeeById(id);
     }
@@ -26,5 +26,9 @@ public class RestEmployeeController {
     public List<Employee> getEmployeeWithParams(@RequestParam(name = "firstName",required = false)String firstName,
                                                 @RequestParam(name = "lastName",required = false)String lastName) {
         return employeeService.getEmployeeWithParams(firstName, lastName);
+    }
+    @PostMapping("/save-employee")
+    public Employee saveEmployee(@RequestBody Employee employee) {
+        return employeeService.saveEmployee(employee);
     }
 }

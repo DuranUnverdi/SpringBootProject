@@ -20,4 +20,7 @@ public class EmployeeService {
     public List<Employee> getEmployeeWithParams(String firstName, String lastName) {
         return employeeRepository.getEployeeWithParams(firstName, lastName);
     }
+    public Employee saveEmployee(Employee employee) {
+        return employeeRepository.saveEmployee(employee);
+    }
 }

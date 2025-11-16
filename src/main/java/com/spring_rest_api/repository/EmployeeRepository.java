@@ -11,10 +11,9 @@ import java.util.List;
 @Repository
 public class EmployeeRepository {
     @Autowired
-    private List<Employee> getEmployees;
+    private  List<Employee> getEmployees ;
 
     public List<Employee> getAllEmployees() {
-
         return getEmployees;
     }
 
@@ -46,7 +45,10 @@ public class EmployeeRepository {
             }
         }
         return employeeWithParams;
+    }
 
+    public Employee saveEmployee(Employee employee) {
+        getEmployees.add(employee);
+        return employee;
     }
 }
-
