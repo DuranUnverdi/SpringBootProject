@@ -14,4 +14,7 @@ public class EmployeeService {
     public List<Employee> getAllEmployees() {
      return employeeRepository.getAllEmployees();
     }
+    public Employee getEmployeeById(String id) {
+        return employeeRepository.getEmployeeById(id);
+    }
 }

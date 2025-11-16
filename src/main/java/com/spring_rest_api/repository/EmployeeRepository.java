@@ -11,8 +11,15 @@ import java.util.List;
 public class EmployeeRepository {
     @Autowired
     private List<Employee> getEmployees;
+
     public List<Employee> getAllEmployees() {
 
         return getEmployees;
+    }
+    public Employee getEmployeeById(String id) {
+        return getEmployees.stream()
+                .filter(employee -> employee.getId().equals(id))
+                .findFirst()
+                .orElse(null);
     }
 }
