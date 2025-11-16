@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Creating the get request project structure in the REST API with layered architecture">
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="get operation with id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/repository/EmployeeRepository.java" afterDir="false" />
@@ -148,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763287482662</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="get operation with id">
+      <option name="closed" value="true" />
+      <created>1763288439973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763288439973</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,25 +173,47 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create new project Spring Boot" />
     <MESSAGE value="Creating the get request project structure in the REST API with layered architecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the get request project structure in the REST API with layered architecture" />
+    <MESSAGE value="get operation with id" />
+    <option name="LAST_COMMIT_MESSAGE" value="get operation with id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="4" />
+          <line>24</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/EmployeeService.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="6" />
+          <line>20</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/repository/EmployeeRepository.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="7" />
+          <line>28</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <line>13</line>
+          <properties field="employeeService" class="com.spring_rest_api.controller.RestEmployeeController" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
