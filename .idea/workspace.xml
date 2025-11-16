@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Create new project Spring Boot" />
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Create new project Spring Boot">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/repository/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/main/MainClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springcore/SpringCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springProject/SpringProjectApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spring_rest_api/springProject/SpringProjectApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/springProject/SpringProjectApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,25 +48,27 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="35VsVQpMyas90aW309pDQEbzJol" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainClass.executor": "Run",
-    "Application.SpringCoreApplication.executor": "Run",
-    "Application.SpringProjectApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Emrah/Desktop/Java Dersleri/SpringProject",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpringCoreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpringProjectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emrah/Desktop/Java Dersleri/SpringProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.MainClass">
+}</component>
+  <component name="RunManager" selected="Application.SpringCoreApplication">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.main.MainClass" />
       <module name="SpringProject" />
@@ -67,11 +83,11 @@
       </method>
     </configuration>
     <configuration name="SpringCoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.springcore.SpringCoreApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.spring_rest_api.springcore.SpringCoreApplication" />
       <module name="SpringProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springcore.*" />
+          <option name="PATTERN" value="com.spring_rest_api.springcore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,7 +100,7 @@
       <module name="SpringProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springProject.*" />
+          <option name="PATTERN" value="com.spring_rest_api.springProject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainClass" />
         <item itemvalue="Application.SpringCoreApplication" />
+        <item itemvalue="Application.MainClass" />
         <item itemvalue="Application.SpringProjectApplication" />
       </list>
     </recent_temporary>
@@ -117,7 +133,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763222117719</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create new project Spring Boot">
+      <option name="closed" value="true" />
+      <created>1763222288913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763222288913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create new project Spring Boot">
+      <option name="closed" value="true" />
+      <created>1763222334334</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763222334334</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,9 +171,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/services/UserService.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/EmployeeService.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/repository/EmployeeRepository.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
