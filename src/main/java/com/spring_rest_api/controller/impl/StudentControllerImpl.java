@@ -20,7 +20,7 @@ public class StudentControllerImpl implements IStudentController {
         return studentService.saveStudent(student);
     }
 
-    @GetMapping("/all/list")
+    @GetMapping("/list")
     @Override
     public List<Student> getAllStudents() {
 
@@ -30,6 +30,13 @@ public class StudentControllerImpl implements IStudentController {
     @Override
     public Student updateStudent(@PathVariable(name ="id") Integer id,@RequestBody Student student) {
         return studentService.updateStudent(id, student);
+    }
+
+    @GetMapping("/list/{id}")
+
+    @Override
+    public Student listStudentById(@PathVariable (name = "id") Integer id) {
+        return studentService.getStudentById(id);
     }
 
 

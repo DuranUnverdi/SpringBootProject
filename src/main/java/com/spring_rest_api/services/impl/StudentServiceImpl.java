@@ -36,6 +36,10 @@ public class StudentServiceImpl implements IStudentService {
         });
     }
 
+    @Override
+    public Student getStudentById(Integer id) {
+        return studentRepository.findById(id).orElse(null);
+    }
 
 
 }

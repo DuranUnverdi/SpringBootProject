@@ -32,6 +32,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DuranUnverdi"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="584895be-662b-4d90-b4b8-33da0f8edbe9" />
+        <option name="url" value="https://github.com/DuranUnverdi/SpringBootProject.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -109,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringProjectApplication" />
         <item itemvalue="Application.SpringCoreApplication" />
+        <item itemvalue="Application.SpringProjectApplication" />
         <item itemvalue="Application.MainClass" />
         <item itemvalue="Application.SpringProjectApplication" />
         <item itemvalue="Application.SpringCoreApplication" />
