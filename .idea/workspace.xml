@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Post request with spring data jpa">
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Get request with spring data jpa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IStudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/StudentControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/StudentControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IStudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MainClass.executor": "Run",
-    "Application.SpringCoreApplication.executor": "Debug",
+    "Application.SpringCoreApplication.executor": "Run",
     "Application.SpringProjectApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -205,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764160515048</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Get request with spring data jpa">
+      <option name="closed" value="true" />
+      <created>1764328382283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1764328382284</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +235,8 @@
     <MESSAGE value="@DeleteMapping and  @PutMapping using" />
     <MESSAGE value="@Entity , @Repository and JPA with create student tablo" />
     <MESSAGE value="Post request with spring data jpa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Post request with spring data jpa" />
+    <MESSAGE value="Get request with spring data jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get request with spring data jpa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,7 +259,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/StudentControllerImpl.java</url>
-          <line>25</line>
+          <line>26</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

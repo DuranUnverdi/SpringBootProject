@@ -23,6 +23,19 @@ public class StudentServiceImpl implements IStudentService {
         return studentRepository.findAll();
     }
 
+    @Override
+    public Student updateStudent(Integer id, Student student) {
+        return studentRepository.findById(id).map(existingStudent -> {
+            existingStudent.setFirstName(student.getFirstName());
+            existingStudent.setLastName(student.getLastName());
+            existingStudent.setBirthDate(student.getBirthDate());
+            return studentRepository.save(existingStudent);
+        }).orElseGet(() -> {
+            student.setId(id);
+            return studentRepository.save(student);
+        });
+    }
+
 
 
 }

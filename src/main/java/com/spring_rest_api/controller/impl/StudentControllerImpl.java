@@ -13,6 +13,7 @@ import java.util.List;
 public class StudentControllerImpl implements IStudentController {
     @Autowired
     private IStudentService studentService;
+
     @PostMapping("/save")
     @Override
     public Student saveStudent(@RequestBody Student student) {
@@ -25,10 +26,11 @@ public class StudentControllerImpl implements IStudentController {
 
         return studentService.getAllStudents();
     }
+    @PutMapping("/update/{id}")
+    @Override
+    public Student updateStudent(@PathVariable(name ="id") Integer id,@RequestBody Student student) {
+        return studentService.updateStudent(id, student);
+    }
 
-//    @PutMapping("/update")
-//    @Override
-//    public Student updateStudent(Student student) {
-//        return studentService.saveStudent(student);
-//    }
+
 }
