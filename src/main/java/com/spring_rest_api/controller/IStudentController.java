@@ -9,4 +9,5 @@ public interface IStudentController {
     public List<Student> getAllStudents();
     public Student updateStudent(Integer id, Student student);
     public Student listStudentById(Integer id);
+    public Student deleteStudentById(Integer id);
 }
