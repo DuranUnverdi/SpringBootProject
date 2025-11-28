@@ -41,5 +41,13 @@ public class StudentServiceImpl implements IStudentService {
         return studentRepository.findById(id).orElse(null);
     }
 
+    @Override
+    public Student deleteStudentById(Integer id) {
+        return studentRepository.findById(id).map(student -> {
+            studentRepository.delete(student);
+            return student;
+        }).orElse(null);
+    }
+
 
 }
