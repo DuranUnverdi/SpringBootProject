@@ -69,5 +69,15 @@ public class StudentServiceImpl implements IStudentService {
 
     }
 
+    @Override
+    public DtoStudent getStudentByFirstName(String firstName) {
+        DtoStudent dto = new DtoStudent();
+        Student student = studentRepository.findByFirstName(firstName);
+        if (student != null) {
+            BeanUtils.copyProperties(student, dto);
+        }
+        return dto;
+    }
+
 
 }

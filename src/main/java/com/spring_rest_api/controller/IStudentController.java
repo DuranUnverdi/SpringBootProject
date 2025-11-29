@@ -16,4 +16,5 @@ public interface IStudentController {
     public DtoStudent listStudentById(Integer id);
 
     public DtoStudent deleteStudentById(Integer id);
+    DtoStudent getStudentByFirstName(String firstName);
 }
