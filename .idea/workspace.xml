@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Id List request with spring data jpa">
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Delete request with spring data jpa">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/dto/DtoStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/dto/DtoStudentIU.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IStudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/StudentControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/StudentControllerImpl.java" afterDir="false" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,12 +34,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DuranUnverdi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DuranUnverdi&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -67,20 +69,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SpringCoreApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SpringProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;duran.unverdi&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emrah/Desktop/Java Dersleri/SpringProject&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainClass.executor": "Run",
+    "Application.SpringCoreApplication.executor": "Run",
+    "Application.SpringProjectApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "duran.unverdi",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Emrah/Desktop/Java Dersleri/SpringProject",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.SpringCoreApplication">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.main.MainClass" />
@@ -236,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764332581341</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Delete request with spring data jpa">
+      <option name="closed" value="true" />
+      <created>1764333726675</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764333726675</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +271,8 @@
     <MESSAGE value="Post request with spring data jpa" />
     <MESSAGE value="Get request with spring data jpa" />
     <MESSAGE value="Id List request with spring data jpa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Id List request with spring data jpa" />
+    <MESSAGE value="Delete request with spring data jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete request with spring data jpa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -283,18 +294,13 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/StudentControllerImpl.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IStudentService.java</url>
-          <line>6</line>
+          <line>8</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/StudentServiceImpl.java</url>
-          <line>22</line>
+          <line>36</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
