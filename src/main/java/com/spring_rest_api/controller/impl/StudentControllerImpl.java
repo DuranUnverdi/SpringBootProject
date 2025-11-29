@@ -1,6 +1,8 @@
 package com.spring_rest_api.controller.impl;
 
 import com.spring_rest_api.controller.IStudentController;
+import com.spring_rest_api.dto.DtoStudent;
+import com.spring_rest_api.dto.DtoStudentIU;
 import com.spring_rest_api.entities.Student;
 import com.spring_rest_api.services.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,31 +18,32 @@ public class StudentControllerImpl implements IStudentController {
 
     @PostMapping("/save")
     @Override
-    public Student saveStudent(@RequestBody Student student) {
-        return studentService.saveStudent(student);
+    public DtoStudent saveStudent(@RequestBody DtoStudentIU studentIU) {
+        return studentService.saveStudent(studentIU);
     }
 
     @GetMapping("/list")
     @Override
-    public List<Student> getAllStudents() {
+    public List<DtoStudent> getAllStudents() {
 
         return studentService.getAllStudents();
     }
+
     @PutMapping("/update/{id}")
     @Override
-    public Student updateStudent(@PathVariable(name ="id") Integer id,@RequestBody Student student) {
+    public DtoStudent updateStudent(@PathVariable(name = "id") Integer id, @RequestBody DtoStudentIU student) {
         return studentService.updateStudent(id, student);
     }
 
     @GetMapping("/list/{id}")
     @Override
-    public Student listStudentById(@PathVariable (name = "id") Integer id) {
+    public DtoStudent listStudentById(@PathVariable(name = "id") Integer id) {
         return studentService.getStudentById(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @Override
-    public Student deleteStudentById(@PathVariable(name = "id") Integer id) {
+    public DtoStudent deleteStudentById(@PathVariable(name = "id") Integer id) {
         return studentService.deleteStudentById(id);
     }
 
