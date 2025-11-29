@@ -47,5 +47,11 @@ public class StudentControllerImpl implements IStudentController {
         return studentService.deleteStudentById(id);
     }
 
+    @GetMapping("/firstname/{firstName}")
+    @Override
+    public DtoStudent getStudentByFirstName(@PathVariable(name ="firstName" ) String firstName) {
+        return studentService.getStudentByFirstName(firstName);
+    }
+
 
 }

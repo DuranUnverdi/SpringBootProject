@@ -12,5 +12,6 @@ public interface IStudentService {
     public DtoStudent updateStudent(Integer id, DtoStudentIU student);
     public DtoStudent getStudentById(Integer id);
     public DtoStudent deleteStudentById(Integer id);
+    DtoStudent getStudentByFirstName(String firstName);
 
 }
