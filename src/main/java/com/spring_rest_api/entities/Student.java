@@ -27,5 +27,7 @@ public class Student {
     @Column(name = "birth_date",nullable = true)
     private Date birthDate;
 
+    @Column(name = "identity_number")
+    private String identityNumber;
 
 }
