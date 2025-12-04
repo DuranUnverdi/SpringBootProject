@@ -4,10 +4,7 @@ import com.spring_rest_api.controller.ICustomerController;
 import com.spring_rest_api.dto.DtoCustomer;
 import com.spring_rest_api.services.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/rest/api/customers")
@@ -18,5 +15,11 @@ public class CustomerControllerImpl implements ICustomerController {
     @Override
     public DtoCustomer findCustomerById(@PathVariable(name = "id") Long id) {
         return customerService.findCustomerById(id);
+    }
+
+    @PostMapping("/save")
+    @Override
+    public DtoCustomer saveCustomer(@RequestBody DtoCustomer dtoCustomer) {
+        return customerService.saveCustomer(dtoCustomer);
     }
 }

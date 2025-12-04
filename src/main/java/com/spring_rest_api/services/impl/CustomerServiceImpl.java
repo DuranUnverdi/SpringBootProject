@@ -36,4 +36,39 @@ public class CustomerServiceImpl implements ICustomerService {
 
         return dtoCustomer;
     }
+
+    @Override
+    public DtoCustomer saveCustomer(DtoCustomer dtoCustomer) {
+
+        Customer customer = new Customer();
+        Adress adress = new Adress();
+
+        // Customer bilgilerini aktar
+        customer.setName(dtoCustomer.getName());
+
+        // Adres bilgileri doluysa aktar
+        if (dtoCustomer.getAdress() != null) {
+            BeanUtils.copyProperties(dtoCustomer.getAdress(), adress);
+            customer.setAdress(adress);
+            adress.setCustomer(customer); // OneToOne çift yön ilişki
+        }
+
+        // Kaydet
+        Customer saved = customerRepository.save(customer);
+
+        // DTO döndür
+        DtoCustomer result = new DtoCustomer();
+        DtoAdress resultAdress = new DtoAdress();
+
+        BeanUtils.copyProperties(saved, result);
+
+        if (saved.getAdress() != null) {
+            BeanUtils.copyProperties(saved.getAdress(), resultAdress);
+            result.setAdress(resultAdress);
+        }
+
+        return result;
+    }
+
+
 }

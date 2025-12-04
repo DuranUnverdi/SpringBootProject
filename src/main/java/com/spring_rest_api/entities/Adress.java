@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Adress {
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private  long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Long id;
     @Column(name = "street")
     private String street;
     @Column(name = "city")
