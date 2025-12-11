@@ -20,7 +20,8 @@ public class AppConfig {
                 new Employee("3", "Alice", "Johnson"),
                 new Employee("4", "Duran", "Ünverdi"),
                 new Employee("5", "Marln", "Trester"),
-                new Employee("6", "Kelly", "Clarkson")));
+                new Employee("6", "Marlrrn", "Trrester"),
+                new Employee("7", "Kelly", "Clarkson")));
     }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
