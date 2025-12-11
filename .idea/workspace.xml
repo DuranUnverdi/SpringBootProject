@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Spring Validation Use and Idendity Encrypt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" afterDir="false" />
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="OneToOne Relation and Customer Post Service Creation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/HomeControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/dto/DtoHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/dto/DtoRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/entities/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/entities/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/repository/HomeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IHomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/HomeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,20 +72,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SpringCoreApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SpringProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;duran.unverdi&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emrah/Desktop/Java Dersleri/SpringProject&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainClass.executor": "Run",
+    "Application.SpringCoreApplication.executor": "Run",
+    "Application.SpringProjectApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "duran.unverdi",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Emrah/Desktop/Java Dersleri/SpringProject",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.SpringCoreApplication">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.main.MainClass" />
@@ -250,7 +257,31 @@
       <option name="project" value="LOCAL" />
       <updated>1764429107192</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Spring Throw Error Message">
+      <option name="closed" value="true" />
+      <created>1764775599132</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764775599132</updated>
+    </task>
+    <task id="LOCAL-00016" summary="OneToOne Relation and Customer Get Service Creation">
+      <option name="closed" value="true" />
+      <created>1764860905818</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764860905818</updated>
+    </task>
+    <task id="LOCAL-00017" summary="OneToOne Relation and Customer Post Service Creation">
+      <option name="closed" value="true" />
+      <created>1764863259861</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764863259861</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +309,10 @@
     <MESSAGE value="Delete request with spring data jpa" />
     <MESSAGE value="@Query Use" />
     <MESSAGE value="Spring Validation Use and Idendity Encrypt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Validation Use and Idendity Encrypt" />
+    <MESSAGE value="Spring Throw Error Message" />
+    <MESSAGE value="OneToOne Relation and Customer Get Service Creation" />
+    <MESSAGE value="OneToOne Relation and Customer Post Service Creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="OneToOne Relation and Customer Post Service Creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -303,6 +337,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IStudentService.java</url>
           <line>8</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/HomeServiceImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/HomeControllerImpl.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IHomeService.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IHomeController.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
