@@ -2,7 +2,7 @@ package com.spring_rest_api.controller;
 
 import com.spring_rest_api.model.Employee;
 import com.spring_rest_api.model.UpdateEmployeeRequest;
-import com.spring_rest_api.services.EmployeeService;
+import com.spring_rest_api.services.impl.EmployeeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/rest/api/employee")
 public class RestEmployeeController {
     @Autowired
-    private EmployeeService employeeService;
+    private EmployeeServiceImpl employeeService;
 
     @GetMapping("/list")
     public List<Employee> getAllEmployees() {
