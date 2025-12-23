@@ -1,18 +1,16 @@
 package com.spring_rest_api.exception;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import com.spring_rest_api.exception.EmployeeNotFoundException;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-@ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
+
     private List<String> errorMessages(List<String> list, String message) {
         list.add(message);
         return list;
@@ -21,27 +19,32 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiError> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
         Map<String, List<String>> errors = new HashMap<>();
-        for (ObjectError error : ex.getBindingResult().getAllErrors()) {
-            String fieldName = ((FieldError) error).getField();
-            if (errors.containsKey(fieldName)) {
-                String errorMessage = error.getDefaultMessage();
-                errors.put(fieldName, errorMessages(errors.get(fieldName), errorMessage));
-                continue;
-            } else {
-                String errorMessage = error.getDefaultMessage();
-                errors.put(fieldName, errorMessages(new java.util.ArrayList<>(), errorMessage));
-            }
 
-        }
+        ex.getBindingResult().getAllErrors().forEach(error -> {
+            String fieldName = ((org.springframework.validation.FieldError) error).getField();
+            errors.computeIfAbsent(fieldName, k -> new ArrayList<>())
+                    .add(error.getDefaultMessage());
+        });
+
         return ResponseEntity.badRequest().body(createApiError(errors));
     }
 
+    @ExceptionHandler(EmployeeNotFoundException.class)
+    public ResponseEntity<ApiError<String>> handleEmployeeNotFoundException(EmployeeNotFoundException ex) {
+
+        ApiError<String> apiError = new ApiError<>();
+        apiError.setId(UUID.randomUUID().toString());
+        apiError.setErrorDate(new Date());
+        apiError.setErrors(ex.getMessage());
+
+        return ResponseEntity.status(404).body(apiError);
+    }
+
     private <T> ApiError<T> createApiError(T errors) {
-        ApiError<T> apiError = new ApiError<T>();
-        apiError.setId(java.util.UUID.randomUUID().toString());
-        apiError.setErrorDate(new java.util.Date());
+        ApiError<T> apiError = new ApiError<>();
+        apiError.setId(UUID.randomUUID().toString());
+        apiError.setErrorDate(new Date());
         apiError.setErrors(errors);
         return apiError;
     }
-
 }
