@@ -4,12 +4,15 @@ import com.spring_rest_api.dto.DtoDepartment;
 import com.spring_rest_api.dto.DtoEmployee;
 import com.spring_rest_api.entities.Department;
 import com.spring_rest_api.entities.Employee;
+import com.spring_rest_api.exception.EmployeeNotFoundException;
 import com.spring_rest_api.repository.DepartmentRepository;
 import com.spring_rest_api.repository.EmployeeRepository;
 import com.spring_rest_api.services.IDepartmentEmployeeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class DepartmentEmployeeServiceImpl implements IDepartmentEmployeeService {
@@ -50,4 +53,30 @@ public class DepartmentEmployeeServiceImpl implements IDepartmentEmployeeService
 
         return result;
     }
+
+    @Override
+    public List<DtoEmployee> getAllEmployees() {
+        List<DtoEmployee> dtoEmployees = employeeRepository.findAll().stream().map(employee -> {
+            DtoEmployee dtoEmployee = new DtoEmployee();
+            BeanUtils.copyProperties(employee, dtoEmployee);
+            return dtoEmployee;
+        }).toList();
+        return dtoEmployees;
+    }
+
+    @Override
+    public DtoEmployee getEmployeeById(Long id) {
+
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(() ->
+                        new EmployeeNotFoundException("Employee bulunamadı. id = " + id)
+                );
+
+        DtoEmployee dtoEmployee = new DtoEmployee();
+        BeanUtils.copyProperties(employee, dtoEmployee);
+
+        return dtoEmployee;
+    }
+
+
 }
