@@ -1,17 +1,17 @@
-package com.spring_rest_api.services;
+package com.spring_rest_api.services.impl;
 
 import com.spring_rest_api.model.Employee;
 import com.spring_rest_api.model.UpdateEmployeeRequest;
-import com.spring_rest_api.repository.EmployeeRepository;
+import com.spring_rest_api.repository.EmployeeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class EmployeeService {
+public class EmployeeServiceImpl {
     @Autowired
-    private EmployeeRepository employeeRepository;
+    private EmployeeeRepository employeeRepository;
     public List<Employee> getAllEmployees() {
      return employeeRepository.getAllEmployees();
     }

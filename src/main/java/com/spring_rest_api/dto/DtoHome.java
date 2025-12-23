@@ -15,5 +15,5 @@ import java.util.List;
 public class DtoHome {
     private Long id;
     private Long price;
-    private List<DtoRoom> room = new ArrayList<>(); // <-- BU ŞART
+    private List<DtoRoom> room = new ArrayList<>();
 }
