@@ -1,7 +1,9 @@
 package com.spring_rest_api.services.impl;
 
+import com.spring_rest_api.dto.DtoCourse;
 import com.spring_rest_api.dto.DtoStudent;
 import com.spring_rest_api.dto.DtoStudentIU;
+import com.spring_rest_api.entities.Course;
 import com.spring_rest_api.entities.Student;
 import com.spring_rest_api.repository.StudentRepository;
 import com.spring_rest_api.services.IStudentService;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements IStudentService {
@@ -67,11 +70,27 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public DtoStudent getStudentById(Integer id) {
-        DtoStudent dtoStudent = new DtoStudent();
-        Student student = studentRepository.findById(id).orElse(null);
-        BeanUtils.copyProperties(student, dtoStudent);
-        return dtoStudent;
+        return studentRepository.findById(id)
+                .map(student -> {
+                    DtoStudent dtoStudent = new DtoStudent();
+                    BeanUtils.copyProperties(student, dtoStudent);
+
+                    if (student.getCourses() != null) {
+                        dtoStudent.setCourses(
+                                student.getCourses().stream()
+                                        .map(course -> {
+                                            DtoCourse dtoCourse = new DtoCourse();
+                                            BeanUtils.copyProperties(course, dtoCourse);
+                                            return dtoCourse;
+                                        })
+                                        .toList()
+                        );
+                    }
+                    return dtoStudent;
+                })
+                .orElse(null);
     }
+
 
     @Override
     public DtoStudent deleteStudentById(Integer id) {
