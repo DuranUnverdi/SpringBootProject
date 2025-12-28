@@ -4,7 +4,9 @@ import com.spring_rest_api.dto.DtoDepartment;
 import com.spring_rest_api.dto.DtoEmployee;
 import com.spring_rest_api.entities.Department;
 import com.spring_rest_api.entities.Employee;
-import com.spring_rest_api.exception.EmployeeNotFoundException;
+import com.spring_rest_api.exception.BaseException;
+import com.spring_rest_api.exception.ErrorMessage;
+import com.spring_rest_api.exception.MessageType;
 import com.spring_rest_api.repository.DepartmentRepository;
 import com.spring_rest_api.repository.EmployeeRepository;
 import com.spring_rest_api.services.IDepartmentEmployeeService;
@@ -66,10 +68,12 @@ public class DepartmentEmployeeServiceImpl implements IDepartmentEmployeeService
 
     @Override
     public DtoEmployee getEmployeeById(Long id) {
-
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() ->
-                        new EmployeeNotFoundException("Employee bulunamadı. id = " + id)
+                        new BaseException(
+                                MessageType.NO_RECORD_EXIST,
+                                "Employee id: " + id
+                        )
                 );
 
         DtoEmployee dtoEmployee = new DtoEmployee();

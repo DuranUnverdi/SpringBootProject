@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/configuration/DataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/configuration/GlobalProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/PropertySourceController.java" afterDir="false" />
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Property File Configuration">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ErrorMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/Exception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/handler/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ApiError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ApiError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/EmployeeNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/DepartmentEmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/DepartmentEmployeeServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766588170950</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Property File Configuration">
+      <option name="closed" value="true" />
+      <created>1766926884196</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1766926884196</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,7 +365,8 @@
     <MESSAGE value="ManyToOne Relation and Employee Get Service Creation" />
     <MESSAGE value="ManyToOne Relation and Employee Get Service Creation&#10;EmployeeNotFoundException added" />
     <MESSAGE value="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor" />
+    <MESSAGE value="Property File Configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Property File Configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
