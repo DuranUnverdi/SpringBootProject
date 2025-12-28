@@ -11,8 +11,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ApiError<T> {
-    private String id;
-    private Date errorDate;
-    private T errors;
+public class ApiError<E> {
+    private Integer status;
+    private Exception<E> exception;
 }
