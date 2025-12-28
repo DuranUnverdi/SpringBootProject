@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "student")
@@ -29,5 +30,12 @@ public class Student {
 
     @Column(name = "identity_number")
     private String identityNumber;
+    @ManyToMany
+    @JoinTable(
+            name = "student_courses",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private List<Course> courses;
 
 }

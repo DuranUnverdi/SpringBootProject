@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="ManyToOne Relation and Employee Get Service Creation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/EmployeeNotFoundException.java" afterDir="false" />
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/configuration/DataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/configuration/GlobalProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/PropertySourceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IDepartmentEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/IDepartmentEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/DepartmentEmployeeControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/DepartmentEmployeeControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IDepartmentEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/IDepartmentEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/DepartmentEmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/DepartmentEmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,20 +69,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainClass.executor": "Run",
-    "Application.SpringCoreApplication.executor": "Run",
-    "Application.SpringProjectApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "duran.unverdi",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Emrah/Desktop/Java Dersleri/SpringProject",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpringCoreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpringProjectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;duran.unverdi&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emrah/Desktop/Java Dersleri/SpringProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.SpringCoreApplication">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.main.MainClass" />
@@ -302,7 +302,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766497519543</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ManyToOne Relation and Employee Get Service Creation&#10;EmployeeNotFoundException added">
+      <option name="closed" value="true" />
+      <created>1766501289331</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1766501289331</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor">
+      <option name="closed" value="true" />
+      <created>1766588170950</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1766588170950</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,7 +352,9 @@
     <MESSAGE value="OneToMany Relation and Customer Get Service Creation" />
     <MESSAGE value="ManyToOne Relation and Employee Post Service Creation" />
     <MESSAGE value="ManyToOne Relation and Employee Get Service Creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="ManyToOne Relation and Employee Get Service Creation" />
+    <MESSAGE value="ManyToOne Relation and Employee Get Service Creation&#10;EmployeeNotFoundException added" />
+    <MESSAGE value="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
