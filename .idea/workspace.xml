@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Property File Configuration">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/entities/RootEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/ICustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/ICustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/exceptionhandlingimpl/RestEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/CustomerControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/CustomerControllerImpl.java" afterDir="false" />
+    <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Returning the same response structure in all controls">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/scheduled/ScheduledExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/springcore/SpringCoreApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766926884196</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Returning the same response structure in all controls">
+      <option name="closed" value="true" />
+      <created>1767104456208</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1767104456208</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,7 +366,8 @@
     <MESSAGE value="ManyToOne Relation and Employee Get Service Creation&#10;EmployeeNotFoundException added" />
     <MESSAGE value="ManyToMany Relation and Employee Get Service Creation&#10;Autowired changed RequiredArgsConstructor" />
     <MESSAGE value="Property File Configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Property File Configuration" />
+    <MESSAGE value="Returning the same response structure in all controls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Returning the same response structure in all controls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
