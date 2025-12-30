@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5c6cd07-5950-42f5-b82c-d280c3401615" name="Changes" comment="Property File Configuration">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/BaseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/Exception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/entities/RootEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ApiError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/ApiError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/EmployeeNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/DepartmentEmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/services/impl/DepartmentEmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/ICustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/ICustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/exceptionhandlingimpl/RestEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/CustomerControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/CustomerControllerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,18 +368,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/exceptionhandlingimpl/RestEmployeeController.java</url>
           <line>14</line>
           <properties field="employeeService" class="com.spring_rest_api.controller.RestEmployeeController" />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/exceptionhandlingimpl/RestEmployeeController.java</url>
           <line>36</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/RestEmployeeController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring_rest_api/controller/impl/exceptionhandlingimpl/RestEmployeeController.java</url>
           <line>40</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>

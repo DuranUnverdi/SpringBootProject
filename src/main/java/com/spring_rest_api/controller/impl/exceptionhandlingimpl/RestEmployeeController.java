@@ -1,4 +1,4 @@
-package com.spring_rest_api.controller;
+package com.spring_rest_api.controller.impl.exceptionhandlingimpl;
 
 import com.spring_rest_api.model.Employee;
 import com.spring_rest_api.model.UpdateEmployeeRequest;
