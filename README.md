@@ -1,61 +1,80 @@
-# 🌟 Spring Boot ile Modern Java Uygulamaları Öğrenme Projesi
+# Spring Boot REST API (öğrenme projesi)
 
-Projenin içeriği; REST API geliştirme, Spring Data JPA ile CRUD işlemleri, validation, entity ilişkileri, hata yönetimi, test yazımı ve güvenli servis geliştirme konularını barındırır
+Spring Boot 3, Spring Data JPA, PostgreSQL ve Spring Security kullanan katmanlı bir REST örneği. Amaç; controller / service / repository ayrımı, DTO kullanımı, entity ilişkileri ve temel Spring özelliklerini denemek.
 
----
+## Gereksinimler
 
-### 🚀 Spring Neden Kullanılır?
-- Spring Framework'ün sağladığı avantajlar
-- Modüler yapı ve hızlı başlangıç özellikleri
-- Spring Boot ile otomatik konfigürasyon
+- **Java 21**
+- **PostgreSQL** (yerelde çalışan bir instance)
+- **Maven** (projede `mvnw` ile de çalıştırılabilir)
 
-### 🔌 Dependency Injection (DI)
-- Bağımlılık yönetimi
-- Constructor ve Setter Injection
-- Gevşek bağlı (loosely coupled) mimari
+## Yapılandırma
 
-### 🔄 Inversion of Control (IoC)
-- Nesne yönetiminin Spring IoC Container tarafından yapılması
-- Bean kavramı
-- `ApplicationContext` kullanımı
+Ayarlar `src/main/resources/app.properties` içindedir. Uygulama giriş sınıfında `@PropertySource("classpath:app.properties")` ile yüklenir.
 
-### 🌐 REST API Geliştirme
-- `@RestController` yapısı
-- GET, POST, PUT, DELETE metodları
-- JSON veri alışverişi
+Önemli alanlar:
 
-### 🗄️ Spring Data JPA ile CRUD İşlemleri
-- Repository katmanı kullanımı
-- `JpaRepository` ile CRUD
-- Hibernate altyapısı
+- `spring.datasource.url`, `username`, `password` — kendi ortamınıza göre düzenleyin.
+- `spring.jpa.properties.hibernate.default_schema` — örnek şemada `student` kullanılıyor.
+- `spring.jpa.hibernate.ddl-auto=update` — geliştirme için; üretimde farklı strateji tercih edin.
 
-### 📦 DTO (Data Transfer Object)
-- Entity ↔ Controller veri transferi
-- DTO kullanımı ve mapleme
+Veritabanı şifresini repoda düz metin tutmak yerine ortam değişkeni veya yerel override (ör. `application-local.properties` + `.gitignore`) kullanmanız önerilir.
 
-### ✔️ Spring Validation
-- Veri doğrulama anotasyonları (`@Valid`, `@NotNull`, `@Email` vb.)
+## Çalıştırma
 
-### 🔗 Entity İlişkileri
-- `@OneToOne`, `@OneToMany`, `@ManyToOne`, `@ManyToMany`
+```bash
+./mvnw spring-boot:run
+```
 
-### ⚠️ Exception Handling
-- Özel exception sınıfları
-- Global hata yönetimi (`@ControllerAdvice`, `@ExceptionHandler`)
+Derleme:
 
-### ⏲️ @Scheduled ile Zamanlanmış Görevler
-- Belirli periyotlarda çalışan otomatik görevler
+```bash
+./mvnw -q compile -DskipTests
+```
 
-### 🧪 JUnit 5 ile Test Yazma
-- Unit ve integration test
-- Mocking teknikleri
-- Test best practices
+Ana sınıf: `com.spring_rest_api.springcore.SpringCoreApplication`
 
-### 🔐 Spring Security
-- Authentication ve Authorization
-- Rol bazlı güvenlik
-- Güvenli endpoint geliştirme
+## Paket yapısı (özet)
 
-### 🔑 JWT (JSON Web Token)
-- Token üretimi ve doğrulama
-- API güvenliği sağlama
+| Paket | Rol |
+|--------|-----|
+| `controller` / `controller.impl` | REST arayüzü; `impl` sınıfları `@RestController` |
+| `services` / `services.impl` | İş kuralları ve dönüşüm |
+| `repository` | Spring Data JPA |
+| `entities` | JPA entity |
+| `dto` | API ve katmanlar arası transfer nesneleri |
+| `exception`, `handler` | Özel istisnalar ve `GlobalExceptionHandler` |
+| `config` | Örnek bean’ler ve Spring Security zinciri |
+| `scheduled` | `@Scheduled` örnekleri |
+
+## REST uçları (önekler)
+
+Tüm yollar proje içinde tanımlı `@RequestMapping` önekleriyle birleşir; tipik önek: **`/rest/api/...`**
+
+- **Öğrenciler:** `/rest/api/students` — CRUD benzeri işlemler, `DtoStudentIU` ile kayıt (`@Valid`).
+- **Müşteriler:** `/rest/api/customers` — tekil getirme (`/list/{id}`), liste (`/list`), kayıt (`/save`); müşteri yanıtlarında `RootEntity` sarmalayıcısı kullanılır.
+- **Ev:** `/rest/api/homes/{id}`
+- **Departman / çalışan:** `/rest/api/employee/department/...`
+
+Tam liste için `controller.impl` altındaki sınıflara bakın.
+
+## Güvenlik
+
+`AppConfig` içinde `SecurityFilterChain` tanımlıdır: şu an **tüm isteklere izin** (`permitAll`), CSRF kapalı. Bu bir öğrenme / geliştirme düzenidir; gerçek ortamda kimlik doğrulama ve yetkilendirme ayrı tasarlanmalıdır.
+
+Projede **JWT** bağımlılığı veya JWT akışı yoktur; token tabanlı güvenlik eklenecekse ayrıca eklenmesi gerekir.
+
+## Projede yer alan başlıklar
+
+- REST controller’lar ve HTTP metotları
+- Spring Data JPA (`JpaRepository`)
+- DTO ve `BeanUtils` ile basit eşleme
+- `jakarta.validation` (`@Valid` vb., ilgili uçlarda)
+- Entity ilişkileri (`@OneToOne`, `@OneToMany` vb.)
+- `@ControllerAdvice` ile merkezi hata işleme (`handler.GlobalExceptionHandler`)
+- `@EnableScheduling` ve örnek zamanlanmış görev
+- Spring Security (şu anki haliyle tüm uçlara açık yapılandırma)
+
+## Test
+
+`src/test/java` altında Spring Boot test iskeleti bulunur; `./mvnw test` ile çalıştırılabilir.

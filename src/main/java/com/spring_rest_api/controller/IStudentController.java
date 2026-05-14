@@ -2,7 +2,6 @@ package com.spring_rest_api.controller;
 
 import com.spring_rest_api.dto.DtoStudent;
 import com.spring_rest_api.dto.DtoStudentIU;
-import com.spring_rest_api.entities.Student;
 
 import java.util.List;
 

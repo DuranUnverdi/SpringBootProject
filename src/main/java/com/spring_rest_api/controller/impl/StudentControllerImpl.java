@@ -3,11 +3,9 @@ package com.spring_rest_api.controller.impl;
 import com.spring_rest_api.controller.IStudentController;
 import com.spring_rest_api.dto.DtoStudent;
 import com.spring_rest_api.dto.DtoStudentIU;
-import com.spring_rest_api.entities.Student;
 import com.spring_rest_api.services.IStudentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

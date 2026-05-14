@@ -2,7 +2,7 @@ package com.spring_rest_api.controller.impl;
 
 import com.spring_rest_api.controller.IDepartmentEmployeeController;
 import com.spring_rest_api.dto.DtoEmployee;
-import com.spring_rest_api.services.impl.DepartmentEmployeeServiceImpl;
+import com.spring_rest_api.services.IDepartmentEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/rest/api/employee/department")
 public class DepartmentEmployeeControllerImpl implements IDepartmentEmployeeController {
     @Autowired
-    private DepartmentEmployeeServiceImpl departmentEmployeeService;
+    private IDepartmentEmployeeService departmentEmployeeService;
 
     @Override
     @PostMapping("/save-employee")

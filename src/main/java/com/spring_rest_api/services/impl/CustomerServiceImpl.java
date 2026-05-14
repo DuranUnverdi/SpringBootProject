@@ -6,13 +6,13 @@ import com.spring_rest_api.entities.Adress;
 import com.spring_rest_api.entities.Customer;
 import com.spring_rest_api.repository.CustomerRepository;
 import com.spring_rest_api.services.ICustomerService;
-import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements ICustomerService {
@@ -23,7 +23,7 @@ public class CustomerServiceImpl implements ICustomerService {
     public DtoCustomer findCustomerById(Long id) {
 
         Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Customer not found with id: " + id));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer not found with id: " + id));
 
         DtoCustomer dtoCustomer = new DtoCustomer();
         DtoAdress dtoAdress = new DtoAdress();
