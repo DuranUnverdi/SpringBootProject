@@ -8,6 +8,8 @@ import com.spring_rest_api.services.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/rest/api/customers")
 public class CustomerControllerImpl extends BaseController implements ICustomerController {
@@ -17,6 +19,12 @@ public class CustomerControllerImpl extends BaseController implements ICustomerC
     @Override
     public RootEntity<DtoCustomer> findCustomerById(@PathVariable(name = "id") Long id) {
         return ok(customerService.findCustomerById(id));
+    }
+
+    @GetMapping("/list")
+    @Override
+    public RootEntity<List<DtoCustomer>> getAllCustomers() {
+        return ok(customerService.getAllCustomers());
     }
 
     @PostMapping("/save")
