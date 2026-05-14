@@ -34,6 +34,15 @@ Derleme:
 
 Ana sınıf: `com.spring_rest_api.springcore.SpringCoreApplication`
 
+## API dokümantasyonu (OpenAPI / Swagger UI)
+
+Uygulama çalışırken (varsayılan port **8080**):
+
+- **Swagger UI:** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+- **OpenAPI JSON:** [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
+
+Sunucu adresi `app.properties` içindeki `openapi.server-url` ile Swagger’da “Servers” alanına yansır (farklı port veya proxy için değiştirin).
+
 ## Paket yapısı (özet)
 
 | Paket | Rol |
@@ -44,7 +53,7 @@ Ana sınıf: `com.spring_rest_api.springcore.SpringCoreApplication`
 | `entities` | JPA entity |
 | `dto` | API ve katmanlar arası transfer nesneleri |
 | `exception`, `handler` | Özel istisnalar ve `GlobalExceptionHandler` |
-| `config` | Örnek bean’ler ve Spring Security zinciri |
+| `config` | Örnek bean’ler, Spring Security zinciri ve OpenAPI tanımı |
 | `scheduled` | `@Scheduled` örnekleri |
 
 ## REST uçları (önekler)
@@ -74,6 +83,7 @@ Projede **JWT** bağımlılığı veya JWT akışı yoktur; token tabanlı güve
 - `@ControllerAdvice` ile merkezi hata işleme (`handler.GlobalExceptionHandler`)
 - `@EnableScheduling` ve örnek zamanlanmış görev
 - Spring Security (şu anki haliyle tüm uçlara açık yapılandırma)
+- **OpenAPI 3** ve **Swagger UI** (springdoc-openapi)
 
 ## Test
 
