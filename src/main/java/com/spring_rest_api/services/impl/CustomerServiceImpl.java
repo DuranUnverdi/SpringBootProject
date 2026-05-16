@@ -87,5 +87,35 @@ public class CustomerServiceImpl implements ICustomerService {
         return result;
     }
 
+    @Override
+    public DtoCustomer updateCustomer(Long id, DtoCustomer dtoCustomer) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer not found with id: " + id));
+
+        if (dtoCustomer.getName() != null) {
+            customer.setName(dtoCustomer.getName());
+        }
+
+        if (dtoCustomer.getAdress() != null) {
+            Adress adress = customer.getAdress();
+            if (adress == null) {
+                adress = new Adress();
+                adress.setCustomer(customer);
+                customer.setAdress(adress);
+            }
+            BeanUtils.copyProperties(dtoCustomer.getAdress(), adress, "id");
+        }
+
+        Customer updated = customerRepository.save(customer);
+
+        DtoCustomer result = new DtoCustomer();
+        DtoAdress resultAdress = new DtoAdress();
+        BeanUtils.copyProperties(updated, result);
+        if (updated.getAdress() != null) {
+            BeanUtils.copyProperties(updated.getAdress(), resultAdress);
+            result.setAdress(resultAdress);
+        }
+        return result;
+    }
 
 }

@@ -12,5 +12,6 @@ public interface ICustomerController {
 
     public DtoCustomer saveCustomer(DtoCustomer dtoCustomer);
 
+    RootEntity<DtoCustomer> updateCustomer(Long id, DtoCustomer dtoCustomer);
 
 }

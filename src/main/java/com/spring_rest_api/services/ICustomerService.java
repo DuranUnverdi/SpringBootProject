@@ -10,4 +10,6 @@ public interface ICustomerService {
     List<DtoCustomer> getAllCustomers();
 
     public DtoCustomer saveCustomer(DtoCustomer dtoCustomer);
+
+    DtoCustomer updateCustomer(Long id, DtoCustomer dtoCustomer);
 }
